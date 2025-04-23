@@ -1,7 +1,7 @@
 import express from "express"
 import usuariosRouter from "./routes/usuarios.js"
 import fornecedores from "./routes/fornecedores.js"
-
+import produtos from "./routes/produtos.js"
 const app = express()
 const port = 3999
 
@@ -12,7 +12,7 @@ app.use(express.json())
 
 app.use("/usuarios",usuariosRouter)
 app.use("/fornecedor", fornecedores)
-
+app.use("/produtos",produtos)
 
 app.get('/', (req, res) => {
   res.send('Bem Vindo a minha API!')
