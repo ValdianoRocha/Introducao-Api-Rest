@@ -1,5 +1,6 @@
 import express from "express"
 import usuariosRouter from "./routes/usuarios.js"
+import fornecedores from "./routes/fornecedores.js"
 
 const app = express()
 const port = 3999
@@ -10,6 +11,7 @@ const port = 3999
 app.use(express.json())
 
 app.use("/usuarios",usuariosRouter)
+app.use("/fornecedor", fornecedores)
 
 
 app.get('/', (req, res) => {
